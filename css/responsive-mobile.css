@@ -1,0 +1,33 @@
+@media only screen and (max-width: 450px) {
+    .flex.mobile-v{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .flex.mobile-v .flex-child{
+        width: 100%;
+    }
+    .mobile-h{
+        display: none !important;
+    }
+    .hero-section.aside{
+        width: 0%;
+        left: -999px;
+    }
+    .right-side-pull{
+        width: 100%;
+    }
+    html{
+        font-size: 17px !important;
+    }
+    .mobile-v.timeline-block .label{
+        border-left: 1px solid #ddd;
+        padding-left: 1em;
+    }
+    .mobile-v.timeline-block .label:after{
+        right: inherit;
+        left: -6px;
+    }
+}

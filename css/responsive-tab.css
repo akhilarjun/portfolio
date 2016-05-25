@@ -1,0 +1,18 @@
+@media only screen and (max-width: 960px) {
+    .flex.tab-v{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .flex.tab-v .flex-child{
+        width: 100%;
+    }
+    .tab-h{
+        display: none !important;
+    }
+    html{
+        font-size: 16px;
+    }
+}
