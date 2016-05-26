@@ -47,13 +47,19 @@ var progressBarLoaded = false;
 jQuery(window).bind('mousewheel DOMMouseScroll touchmove scroll',function(e){
     var heroSection = jQuery('.hero-section');
     var windowWidth = jQuery(this).width();
+    var scrollTopLimit = 0;
+    if((browser.name == 'IE' || browser.name == 'MSIE' || browser.name == 'Firefox')){
+        scrollTopLimit = jQuery('html').scrollTop();
+    } else {
+        scrollTopLimit = jQuery('body').scrollTop();
+    }
     setTimeout(function(){
-        if(windowWidth > 450){
-            if(!heroSection.hasClass('aside') && jQuery('body').scrollTop() > 0){
+        if(windowWidth > 600){
+            if(!heroSection.hasClass('aside') && scrollTopLimit > 0){
                 heroSection.addClass('aside');
                 loadProgressBar();
             } else if(jQuery('body').scrollTop() == 0){
-                heroSection.removeClass('aside');
+                //heroSection.removeClass('aside');
             }
         } else {
             if(!progressBarLoaded){
@@ -64,6 +70,16 @@ jQuery(window).bind('mousewheel DOMMouseScroll touchmove scroll',function(e){
     },1);
 });
 
+//click Scroll here
+var setAside = function(){
+    var heroSection = jQuery('.hero-section');
+    var windowWidth = jQuery(this).width();
+    if(windowWidth > 600){
+        heroSection.addClass('aside');
+        loadProgressBar();
+    }
+};
+
 //Type Effect
 jQuery('#typing-letters').typed({
     strings : ["I am a <strong>Blogger</strong>",
@@ -71,5 +87,5 @@ jQuery('#typing-letters').typed({
                "^500 And also...",
                "^500 <strong>Web Developer</strong>"],
     typeSpeed : 0,
-    loop : false
+    loop : true
 });
