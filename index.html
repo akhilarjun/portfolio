@@ -14,7 +14,7 @@
         <script>
             WebFont.load({
                 google: {
-                    families: ['Roboto','Material Icons']
+                    families: ['Roboto']
                 },
                 active : function(){
                     // callback for font-fetch complete
@@ -44,8 +44,8 @@
                         // <span id='typing-letters'></span>
                     </div>
                 </div>
-                <div class="scroll-down flex">
-                    <div class="margin-auto flex bounce">
+                <div class="scroll-down flex center">
+                    <div class="margin-auto flex bounce" onclick="setAside()">
                         <div class="flex-child">
                             <i class="fa fa-angle-double-down"></i>
                         </div>
@@ -196,6 +196,7 @@
         </div>
         <script src="js/jq.js"></script>
         <script src="js/typed.js"></script>
+        <script src="js/find_browser.js"></script>
         <script src="js/resume.js"></script>
     </body>
 </html>
