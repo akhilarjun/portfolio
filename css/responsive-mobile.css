@@ -13,11 +13,17 @@
         display: none !important;
     }
     .hero-section.aside{
-        width: 0%;
-        left: -999px;
+        width: 100%;
+        border-right-color: transparent;
+    }
+    .hero-section{
+        position: absolute;
     }
     .right-side-pull{
         width: 100%;
+        position: absolute;
+        top: 100%;
+        padding-top: 0;
     }
     html{
         font-size: 17px !important;
