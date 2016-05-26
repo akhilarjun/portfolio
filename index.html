@@ -12,6 +12,7 @@
         <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js"></script>
         <script>
+            //Font Load
             WebFont.load({
                 google: {
                     families: ['Roboto']
@@ -23,18 +24,22 @@
         </script>
     </head>
     <body>
+        <!-- Main Container -->
         <div class="main-container">
+            <!-- Navigation Bar -->
             <div class="nav flex">
                 <div class="flex-child"></div>
-                <div class="no-flex menu withHoverEffects">About</div>
-                <div class="no-flex menu withHoverEffects">Blog</div>
-                <div class="no-flex menu withHoverEffects">Say Hello</div>
+                <div class="no-flex menu withHoverEffects ns" href="#about">About</div>
+                <div class="no-flex menu withHoverEffects ns">Blog</div>
+                <div class="no-flex menu withHoverEffects ns" href="#contactMe">Say Hello</div>
             </div>
+            <!-- Hero Section -->
             <div class="hero-section flex center">
+                <!-- Logo Holder -->
                 <div class="logo-container margin-auto">
                     <img src="img/logo.png" class="logo">
                     <div class="divider"></div>
-                    <div class="logo-name">
+                    <div class="logo-name ns">
                         Akhil Arjun
                     </div>
                     <div class="logo-desc-email tab-h">
@@ -44,6 +49,7 @@
                         // <span id='typing-letters'></span>
                     </div>
                 </div>
+                <!-- Scroll Text -->
                 <div class="scroll-down flex center">
                     <div class="margin-auto flex bounce" onclick="setAside()">
                         <div class="flex-child">
@@ -54,6 +60,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Social Icons -->
                 <div class="social-footer flex">
                     <div class="margin-auto flex">
                         <div class="flex-child social-icon github">
@@ -68,8 +75,11 @@
                     </div>
                 </div>
             </div>
+            <!-- Right Side Section -->
             <div class="right-side-pull">
-                <div class="content">
+                <!-- Content -->
+                <div id="about" class="content">
+                    <!-- Skills Section -->
                     <div class="section">
                         <div class="heading">
                             Skills
@@ -94,7 +104,7 @@
                         </div>
                         <div class="flex skill-set mobile-v">
                             <div class="flex-child skill flex vertical">
-                                <div class="flex-child skill-name">CSS</div>
+                                <div class="flex-child skill-name">CSS3</div>
                                 <div class="flex-child flex">
                                     <div class="progress-bar flex-child">
                                         <i data-progress="90"><span></span></i>
@@ -129,6 +139,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Experience Section -->
                     <div class="section">
                         <div class="timeline-heading">
                             Experience
@@ -160,6 +171,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Education Section -->
                     <div class="section">
                         <div class="timeline-heading">
                             Education
@@ -186,7 +198,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer flex">
+                <!-- Footer -->
+                <div id="contactMe" class="footer flex">
                     <div class="flex-child"></div>
                     <div class="no-flex">
                         <i class="fa fa-copyright"></i> A Concept By Akhil Arjun
