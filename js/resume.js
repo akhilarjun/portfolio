@@ -43,14 +43,23 @@ jQuery('.social-icon').click(function(e){
 });
 
 //Scroll Effect
+var progressBarLoaded = false;
 jQuery(window).bind('mousewheel DOMMouseScroll touchmove scroll',function(e){
     var heroSection = jQuery('.hero-section');
+    var windowWidth = jQuery(this).width();
     setTimeout(function(){
-        if(!heroSection.hasClass('aside') && jQuery('body').scrollTop() > 0){
-            heroSection.addClass('aside');
-            loadProgressBar();
-        } else if(jQuery('body').scrollTop() == 0){
-            heroSection.removeClass('aside');
+        if(windowWidth > 450){
+            if(!heroSection.hasClass('aside') && jQuery('body').scrollTop() > 0){
+                heroSection.addClass('aside');
+                loadProgressBar();
+            } else if(jQuery('body').scrollTop() == 0){
+                heroSection.removeClass('aside');
+            }
+        } else {
+            if(!progressBarLoaded){
+                progressBarLoaded = true;
+                loadProgressBar();
+            }
         }
     },1);
 });
