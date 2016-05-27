@@ -12,6 +12,9 @@
     .tab-h{
         display: none !important;
     }
+    .logo{
+        max-width: 70%;
+    }
     html{
         font-size: 16px;
     }
