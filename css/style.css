@@ -269,6 +269,7 @@ a{
 .helper{
     color: #bbb;
     font-size: 0.6em;
+    font-weight: normal;
 }
 
 .timeline-heading,.heading{
