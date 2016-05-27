@@ -19,6 +19,9 @@
     .hero-section{
         position: absolute;
     }
+    .logo{
+        max-width: 50%;
+    }
     .right-side-pull{
         width: 100%;
         position: absolute;
