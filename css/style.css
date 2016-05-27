@@ -266,6 +266,11 @@ a{
     padding: 1em 2em;
 }
 
+.helper{
+    color: #bbb;
+    font-size: 0.6em;
+}
+
 .timeline-heading,.heading{
     font-size: 1.3em;
     font-weight: bold;
