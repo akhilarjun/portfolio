@@ -54,13 +54,13 @@ jQuery('.social-icon').click(function(e){
 var progressBarLoaded = false;
 var scrolled = false;
 jQuery(window).bind('mousewheel DOMMouseScroll touchmove scroll',function(e){
-    var heroSection = jQuery('.hero-section');
+    var leftBar = jQuery('.left-bar');
     var windowWidth = jQuery(this).width();
     var scrollTopLimit = _parentElem.scrollTop();
     setTimeout(function(){
         if(windowWidth > 600){
-            if(!heroSection.hasClass('aside') && scrollTopLimit > 0){
-                heroSection.addClass('aside');
+            if(!leftBar.hasClass('aside') && scrollTopLimit > 0){
+                leftBar.addClass('aside');
                 loadProgressBar();
                 if(!scrolled){
                     _parentElem.animate({
@@ -68,7 +68,7 @@ jQuery(window).bind('mousewheel DOMMouseScroll touchmove scroll',function(e){
                     });
                 }
             } else if(jQuery('body').scrollTop() == 0){
-                //heroSection.removeClass('aside');
+                //leftBar.removeClass('aside');
             }
         } else {
             if(!progressBarLoaded){
@@ -81,23 +81,13 @@ jQuery(window).bind('mousewheel DOMMouseScroll touchmove scroll',function(e){
 
 //click Scroll here
 var setAside = function(){
-    var heroSection = jQuery('.hero-section');
+    var leftBar = jQuery('.left-bar');
     var windowWidth = jQuery(this).width();
     if(windowWidth > 600){
-        heroSection.addClass('aside');
+        leftBar.addClass('aside');
         loadProgressBar();
     }
 };
-
-//Type Effect
-jQuery('#typing-letters').typed({
-    strings : ["I am a <strong>Blogger</strong>",
-               "^500 <strong>Designer</strong>",
-               "^500 And also...",
-               "^500 <strong>Web Developer</strong>"],
-    typeSpeed : 0,
-    loop : true
-});
 
 //Navigation
 jQuery('.menu').click(function(){
@@ -110,3 +100,15 @@ jQuery('.menu').click(function(){
         },500);
     }
 });
+
+//Time to read the CV
+var totalText = jQuery('body').text().replace(/\s/gm,'');
+jQuery('#minsToRead').text(_timeToRead(totalText.length));
+
+//hack to fix the jump issue in mobileBrowsers
+var moo = function(event){
+    event.preventDefault();
+    //It's a Moo Point
+    //Credits - 'Joey Tribbiani'
+};
+jQuery(window).resize(moo);
