@@ -112,3 +112,4 @@ var moo = function(event){
     //Credits - 'Joey Tribbiani'
 };
 jQuery(window).resize(moo);
+jQuery('body').height(jQuery(window).height()+60);
