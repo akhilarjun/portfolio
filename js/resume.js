@@ -107,10 +107,8 @@ jQuery('#minsToRead').text(_timeToRead(totalText.length));
 
 //hack to fix the jump issue in mobileBrowsers
 var moo = function(event){
-    alert('resized');
-    event.preventDefault();
     //It's a Moo Point
     //Credits - 'Joey Tribbiani'
 };
-jQuery(window).resize(moo);
+jQuery(window).resize('moo');
 jQuery('body').height(jQuery(window).height()+60);
