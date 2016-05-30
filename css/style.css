@@ -76,6 +76,58 @@ a{
     margin: auto;
 }
 
+.loader-section{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+    opacity: 1;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+}
+
+.loader-section.hide{
+    opacity: 0;
+    z-index: -999999;
+}
+
+.loader-section div{
+    font-family: sans-serif;
+}
+
+.loader-text{
+    display: inline-block;
+    position: relative;
+    padding: 15px;
+    
+}
+
+.loader-text:after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 2px;
+    background: #111;
+    width: 0%;
+    -webkit-animation: progressWidth 2500ms infinite alternate;
+    animation: progressWidth 2500ms infinite alternate;
+}
+
+@-webkit-keyframes progressWidth{
+    50% {width: 100%;left:0;right:inherit;}
+    51%{right: 0;left:inherit;}
+    99% {width: 0%;right: 0;left:inherit;}
+    100% {left:0;right:inherit;}
+}
+
+@keyframes progressWidth{
+    50% {width: 100%;left:0;right:inherit;}
+    51%{right: 0;left:inherit;}
+    99% {width: 0%;right: 0;left:inherit;}
+    100% {left:0;right:inherit;}
+}
+
 .nav{
     position: fixed;
     width: 100%;
@@ -149,6 +201,8 @@ a{
 .logo{
     height: auto;
     max-width: 100%;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
 }
 
 .logo-container .divider{
@@ -266,6 +320,12 @@ a{
     padding: 1em 2em;
 }
 
+.helper{
+    color: #bbb;
+    font-size: 0.6em;
+    font-weight: normal;
+}
+
 .timeline-heading,.heading{
     font-size: 1.3em;
     font-weight: bold;
@@ -379,6 +439,108 @@ a{
 .timeline-block .desc .description{
     font-size: 0.9em;
     color: #aaa;
+}
+
+.section .input{
+    position: relative;
+    margin: 20px 0 30px;
+}
+
+.input.subjectForMail{
+    margin-top: 35px;
+}
+
+.input.bodyForMail{
+    margin-bottom: 15px;
+}
+
+.input input,
+.input textarea,
+.input button{
+    padding: 10px;
+    font-size: 0.9em;
+    color: #333;
+    width: 100%;
+    border: 2px solid #ccc;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.input:after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0;
+    height: 2px;
+    background: #c44;
+    transition: all 300ms;
+}
+
+.input.bodyForMail:after{
+    bottom: 4px;
+}
+
+.input.error:after{
+    width: 100%;
+}
+
+.input textarea{
+    resize: none;
+    overflow-y: auto;
+}
+
+.input .sendMailBtn{
+    cursor: pointer;
+    background: #fff;
+    color: #444;
+    font-weight: 500;
+    width: auto;
+    padding: 10px 15px 10px 20px;
+    transition: all 200ms;
+}
+
+.input .sendMailBtn i{
+    position: relative;
+    right: -20px;
+    opacity: 0;
+    transition: all 200ms;
+}
+
+.input .sendMailBtn:hover{
+    background: #ccc;
+    color: #333;
+}
+
+.input .sendMailBtn:hover i{
+    right: 0;
+    opacity: 1;
+}
+
+.input input:active + label,
+.input input:focus + label,
+.input textarea:active + label,
+.input textarea:focus + label,
+.input input:valid + label,
+.input textarea:valid + label{
+    top: -22px;
+    left: 0;
+    color: #888;
+    font-weight: 600;
+}
+
+.input input:focus,
+.input textarea:focus{
+    border: 2px solid #aaa;
+}
+
+.input label{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #ccc;
+    font-size: 0.9em;
+    transition: all 300ms;
+    cursor: text;
 }
 
 .footer{
