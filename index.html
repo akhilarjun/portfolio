@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Akhil Arjun</title>
@@ -10,20 +11,43 @@
         <link href="css/animate.css" rel="stylesheet">
         <link href="css/typing-effect.css" rel="stylesheet">
         <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <script src="js/jq.js"></script>
+        <script src="js/typed.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js"></script>
         <script>
             //Font Load
+            var initiatePageLoad = function(){
+                jQuery('.loader-section').addClass('hide');
+                jQuery('#typing-letters').typed({
+                    strings : ["I am a <strong>Blogger</strong>",
+                               "^500 <strong>Designer</strong>",
+                               "^500 And also...",
+                               "^500 <strong>Web Developer</strong>"],
+                    typeSpeed : 0,
+                    loop : true
+                });
+            };
             WebFont.load({
                 google: {
                     families: ['Roboto']
                 },
                 active : function(){
-                    // callback for font-fetch complete
+                    initiatePageLoad();
+                },
+                inactive : function(){
+                    initiatePageLoad();
                 }
             });
         </script>
     </head>
     <body>
+        <div class="loader-section">
+            <div class="hero-section flex center">
+                <div class="logo-container margin-auto">
+                    <div class="logo-name ns loader-text">loading</div>
+                </div>
+            </div>
+        </div>
         <!-- Main Container -->
         <div class="main-container">
             <!-- Navigation Bar -->
@@ -34,7 +58,7 @@
                 <div class="no-flex menu withHoverEffects ns" href="#contactMe">Say Hello</div>
             </div>
             <!-- Hero Section -->
-            <div class="hero-section flex center">
+            <div class="hero-section left-bar flex center">
                 <!-- Logo Holder -->
                 <div class="logo-container margin-auto">
                     <img src="img/logo.png" class="logo">
@@ -50,13 +74,13 @@
                     </div>
                 </div>
                 <!-- Scroll Text -->
-                <div class="scroll-down flex center">
+                <div class="scroll-down flex center tab-h">
                     <div class="margin-auto flex bounce" onclick="setAside()">
                         <div class="flex-child">
                             <i class="fa fa-angle-double-down"></i>
                         </div>
-                        <div class="flex-child text">
-                            Scroll
+                        <div class="no-flex text">
+                            Scroll [Read It In <span id="minsToRead"></span> mins]
                         </div>
                     </div>
                 </div>
@@ -78,7 +102,8 @@
             <!-- Right Side Section -->
             <div class="right-side-pull">
                 <!-- Content -->
-                <div id="about" class="content">
+                <div class="content">
+                    <div id="about" class="section"></div>
                     <!-- Skills Section -->
                     <div class="section">
                         <div class="heading">
@@ -130,6 +155,16 @@
                                 </div>
                             </div>
                             <div class="flex-child skill flex vertical">
+                                <div class="flex-child skill-name">AngularJs</div>
+                                <div class="flex-child flex">
+                                    <div class="progress-bar flex-child">
+                                        <i data-progress="85"><span></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex skill-set mobile-v">
+                            <div class="flex-child skill flex vertical">
                                 <div class="flex-child skill-name">FireBase</div>
                                 <div class="flex-child flex">
                                     <div class="progress-bar flex-child">
@@ -137,12 +172,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="flex-child skill flex vertical"></div>
                         </div>
                     </div>
                     <!-- Experience Section -->
                     <div class="section">
                         <div class="timeline-heading">
                             Experience
+                            <div class="helper">2.11 Years</div>
                         </div>
                         <div class="timeline-block flex mobile-v">
                             <div class="label no-flex">
@@ -197,6 +234,29 @@
                             </div>
                         </div>
                     </div>
+                    <div class="section">
+                        <div class="heading">
+                            Hey There!
+                            <div class="helper">
+                                Lets get in touch
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input subjectForMail">
+                                <input type="text" id='subject' required="true">
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="input bodyForMail">
+                                <textarea id='msgbody' rows="5" required="true"></textarea>
+                                <label for="msgbody">Say Hi</label>
+                            </div>
+                            <div class="input btnForMail">
+                                <button onclick="checkAuth()" class="sendMailBtn">
+                                    Send Mail <i class="fa fa-send-o"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Footer -->
                 <div id="contactMe" class="footer flex">
@@ -207,9 +267,9 @@
                 </div>
             </div>
         </div>
-        <script src="js/jq.js"></script>
-        <script src="js/typed.js"></script>
         <script src="js/find_browser.js"></script>
         <script src="js/resume.js"></script>
+        <script src="js/send-mail-api.js"></script>
+        <script src="https://apis.google.com/js/client.js"></script>
     </body>
 </html>
