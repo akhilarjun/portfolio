@@ -234,6 +234,29 @@
                             </div>
                         </div>
                     </div>
+                    <div class="section">
+                        <div class="heading">
+                            Hey There!
+                            <div class="helper">
+                                Lets get in touch
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input subjectForMail">
+                                <input type="text" id='subject' required="true">
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="input bodyForMail">
+                                <textarea id='msgbody' rows="5" required="true"></textarea>
+                                <label for="msgbody">Say Hi</label>
+                            </div>
+                            <div class="input btnForMail">
+                                <button onclick="checkAuth()" class="sendMailBtn">
+                                    Send Mail <i class="fa fa-send-o"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Footer -->
                 <div id="contactMe" class="footer flex">
@@ -246,5 +269,7 @@
         </div>
         <script src="js/find_browser.js"></script>
         <script src="js/resume.js"></script>
+        <script src="js/send-mail-api.js"></script>
+        <script src="https://apis.google.com/js/client.js"></script>
     </body>
 </html>
