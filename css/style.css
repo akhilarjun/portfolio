@@ -408,7 +408,7 @@ a{
     top: 26px;
     height: 0px; width: 10px;
     background: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     -webkit-transition: all 400ms;
     transition: all 400ms;
 }
