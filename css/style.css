@@ -392,6 +392,7 @@ a{
 .timeline-block .label{
     font-weight: bold;
     position: relative;
+    min-width: 90px;
 }
 
 .timeline-block .label > div{
@@ -439,6 +440,14 @@ a{
 .timeline-block .desc .description{
     font-size: 0.9em;
     color: #aaa;
+}
+
+.timeline-block .desc .description .pill{
+    background: #9ee7fd;
+    color: #636363;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .section .input{
