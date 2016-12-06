@@ -452,6 +452,12 @@ a{
     border-radius: 10px;
 }
 
+.timeline-block .desc .description .pill-desc{
+   font-size: 0.8em;
+   margin: 5px 0;
+   font-weight: bold;
+}
+
 .section .input{
     position: relative;
     margin: 20px 0 30px;
