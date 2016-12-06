@@ -405,12 +405,10 @@ a{
     content: "";
     position: absolute;
     right: -6px;
-    top: 19px;
-    height: 10px; width: 10px;
+    top: 26px;
+    height: 0px; width: 10px;
     background: #fff;
-    border: 1px solid #d1f4ff;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    border: 1px solid #ccc;
     -webkit-transition: all 400ms;
     transition: all 400ms;
 }
