@@ -524,8 +524,8 @@ a{
 }
 
 .input .sendMailBtn:hover{
-    background: #ccc;
-    color: #333;
+    background: #39c;
+    color: #eee;
 }
 
 .input .sendMailBtn:hover i{
