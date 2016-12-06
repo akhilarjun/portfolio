@@ -355,7 +355,7 @@ a{
     top: 0; left: 0;
     height: 100%;
     width: 0%;
-    background-color: #222;
+    background-color: #2b6080;
     border-right: 5px solid #39c;
     font-style: normal;
 }
@@ -443,10 +443,12 @@ a{
 }
 
 .timeline-block .desc .description .pill{
-    background: #9ee7fd;
+    background: #d1f4ff;
+    font-size: 0.8em;
     color: #636363;
     padding: 5px 10px;
-    margin: 10px;
+    margin: 5px 5px 5px 0;
+    display: inline-block;
     border-radius: 10px;
 }
 
