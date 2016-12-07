@@ -524,9 +524,14 @@ a{
 .input.get-my-cv button{
 	cursor: pointer;
 	color: #222;
-	box-shadow: 0 0 5px 1px #ddd;
+	box-shadow: 0 0 1px 1px #ddd;
 	width: initial;
 	margin-top: 30px;
+	transition: all 250ms;
+}
+
+.input.get-my-cv button:hover{
+    box-shadow: 0 0 5px 1px #ddd;	
 }
 
 .input .sendMailBtn i{
