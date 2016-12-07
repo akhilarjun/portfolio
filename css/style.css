@@ -453,12 +453,13 @@ a{
     padding: 5px 10px;
     margin: 5px 5px 5px 0;
     display: inline-block;
+    border-radius: 15px;
+    box-shadow: 1px 1px 4px #9a9a9a;
 }
 
 .timeline-block .desc .description .pill-desc{
    font-size: 0.8em;
-   margin: 5px 0;
-   font-weight: bold;
+   margin: 15px 0 5px;
 }
 
 .section .input{
