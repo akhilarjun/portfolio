@@ -119,11 +119,12 @@ jQuery(window).resize(moo);
 //welcoming you
 var boldStyle = 'font-weight:bold;color:#333;',
     blank = '',
-    emailStyle = 'color:#57b1ff;',
+    emailStyle = 'color:#39c;text-decoration:underline;',
     consoleStyle = 'padding:1px 5px;border-radius:3px;background:#333;color:#eee;';
 window.console.log('%cHey There!%c '+
-                   '\n\nSo you love %cConsole%c too ! '+
-                   '\nIf you have any suggestions, kindly drop a mail to %cakhilparjun@gmail.com%c '+
+                   '\n\nSo you love %cConsole%c too. Cool ! '+
+                   '\nIf you have any suggestions regarding the site or maybe wanna talk about any project, '+
+                   'feel free to drop a mail at %cakhilparjun@gmail.com%c '+
                    '\n\nRegards, \n%cAkhil Arjun%c',
                    boldStyle,blank,
                    consoleStyle,blank,
