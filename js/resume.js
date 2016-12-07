@@ -117,7 +117,15 @@ var moo = function(event){
 jQuery(window).resize(moo);
 
 //welcoming you
-var boldStyle = 'font-weight:bold;color:#333;';
-var blank = '';
-var consoleStyle = 'padding:1px 5px;border-radius:3px;background:#333;color:#eee;';
-window.console.log('%cHey There!%c \nSo you love %cConsole%c too ! \nIf you have any suggestions, Kindly drop a mail to mailto:akhilparjun@gmail.com \nRegards, \nAkhil Arjun',boldStyle,blank,consoleStyle,blank);
+var boldStyle = 'font-weight:bold;color:#333;',
+    blank = '',
+    emailStyle = 'color:#57b1ff;',
+    consoleStyle = 'padding:1px 5px;border-radius:3px;background:#333;color:#eee;';
+window.console.log('%cHey There!%c '+
+                   '\n\nSo you love %cConsole%c too ! '+
+                   '\nIf you have any suggestions, kindly drop a mail to %cakhilparjun@gmail.com%c '+
+                   '\n\nRegards, \n%cAkhil Arjun%c',
+                   boldStyle,blank,
+                   consoleStyle,blank,
+                   emailStyle,blank,
+                   boldStyle,blank);
