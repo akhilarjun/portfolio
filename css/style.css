@@ -314,6 +314,7 @@ a{
     z-index: 1;
     padding: 180px 0 0;
     background: #fff;
+	background: #57b1ff;
 }
 
 .section{
@@ -322,6 +323,7 @@ a{
 
 .helper{
     color: #bbb;
+	color: #eee;
     font-size: 0.6em;
     font-weight: normal;
 }
@@ -399,6 +401,7 @@ a{
     font-weight: normal;
     font-size: 0.7em;
     color: #aaa;
+	color: #eee;
 }
 
 .timeline-block .label:after{
@@ -430,6 +433,7 @@ a{
 
 .timeline-block .desc .sub-header{
     color: #ccc;
+	color: #eee;
     font-weight: 300;
     margin-bottom: 5px;
     font-size: 0.8em;
@@ -438,6 +442,7 @@ a{
 .timeline-block .desc .description{
     font-size: 0.9em;
     color: #aaa;
+	color: #eee;
 }
 
 .pill{
