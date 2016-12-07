@@ -6,7 +6,6 @@
         -ms-flex-direction: column;
         flex-direction: column;
         display: block;
-        background:#39c;
     }
     .flex.mobile-v .flex-child{
         width: 100%;
