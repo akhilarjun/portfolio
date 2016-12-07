@@ -521,6 +521,14 @@ a{
     transition: all 200ms;
 }
 
+.input.get-my-cv button{
+	cursor: pointer;
+	color: #222;
+	box-shadow: 0 0 5px 1px #ddd;
+	width: initial;
+	margin-top: 30px;
+}
+
 .input .sendMailBtn i{
     position: relative;
     right: -20px;
