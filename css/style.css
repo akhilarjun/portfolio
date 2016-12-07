@@ -357,7 +357,7 @@ a{
     top: 0; left: 0;
     height: 100%;
     width: 0%;
-    background-color: #2e4b5d;
+    background-color: #222;
     border-right: 5px solid #39c;
     font-style: normal;
 }
@@ -429,6 +429,7 @@ a{
 .timeline-block .desc .header{
     font-weight: bold;
     font-size: 1em;
+	color: #befffa;
 }
 
 .timeline-block .desc .sub-header{
