@@ -528,11 +528,6 @@ a{
     transition: all 200ms;
 }
 
-.input .sendMailBtn:hover{
-    background: #39c;
-    color: #eee;
-}
-
 .input .sendMailBtn:hover i{
     right: 0;
     opacity: 1;
@@ -547,12 +542,12 @@ a{
     top: -22px;
     left: 0;
     color: #fff;
-    font-weight: 600;
+    font-size: 0.8em;
 }
 
 .input input:focus,
 .input textarea:focus{
-    border: 2px solid #fff;
+    border: 2px dashed #fff;
 }
 
 .input label{
