@@ -115,3 +115,9 @@ var moo = function(event){
     //It's a Moo Point - 'Joey Tribbiani'
 };
 jQuery(window).resize(moo);
+
+//welcoming you
+var boldStyle = 'font-weight:bold;color:#333;';
+var italicStyle = 'font-stylet:italic;color:#333;';
+window.console.log('%c Hey There...',boldStyle);
+window.console.log('%c So you love Console too ;)',italicStyle);
