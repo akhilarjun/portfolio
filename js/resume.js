@@ -101,6 +101,11 @@ jQuery('.menu').click(function(){
     }
 });
 
+//Get my CV
+jQuery('.get-my-cv button').click(function(){
+    window.open('http://www.akhilarjun.com/Akhil-Arjun-CV.docx');
+});
+
 //Time to read the CV
 var totalText = jQuery('body').text().replace(/\s/gm,'');
 jQuery('#minsToRead').text(_timeToRead(totalText.length));
