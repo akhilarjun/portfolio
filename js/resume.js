@@ -118,6 +118,6 @@ jQuery(window).resize(moo);
 
 //welcoming you
 var boldStyle = 'font-weight:bold;color:#333;';
-var italicStyle = 'font-style:italic;padding:5px;border-radius:5px;background:#333;color:#eee;';
+var italicStyle = 'font-style:italic;padding:5px;border-radius:2px;background:#333;color:#eee;';
 window.console.log('%c Hey There...',boldStyle);
-window.console.log('So you love %c Console %c too ;)',italicStyle);
+window.console.log('So you love %cConsole',italicStyle,' too !');
