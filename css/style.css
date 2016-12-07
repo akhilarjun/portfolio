@@ -489,6 +489,14 @@ a{
     overflow-y: auto;
 }
 
+.input .get-my-cv{
+	cursor: pointer;
+	color: #222;
+	box-shadow: 0 0 5px 1px #ddd;
+	width: initial;
+	margin-top: 30px;
+}
+
 .input .sendMailBtn{
     cursor: pointer;
     background: #fff;
