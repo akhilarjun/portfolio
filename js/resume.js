@@ -96,7 +96,7 @@ jQuery('.menu').click(function(){
         var elemToScrollTo = jQuery(idToScroll);
         scrolled = true;
         _parentElem.animate({
-            scrollTop : elemToScrollTo.offset().top+'px'
+            scrollTop : (elemToScrollTo.offset().top-50)+'px'
         },500);
     }
 });
