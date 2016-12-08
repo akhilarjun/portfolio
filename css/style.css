@@ -321,6 +321,10 @@ a{
     padding: 1em 2em;
 }
 
+.awesome-about{
+    color: #fff;
+}
+
 .helper{
     color: #fff;
     font-size: 0.6em;
