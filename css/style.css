@@ -479,6 +479,7 @@ a{
 .input input,
 .input textarea,
 .input button{
+    -webkit-appearance: none;
     padding: 10px;
     font-size: 0.9em;
     color: #fff;
