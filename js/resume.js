@@ -7,11 +7,6 @@ var _timeToRead = function(noOfWords){
     return timeReqd;
 };
 
-//Trying to register service worker
-if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/js/sw.js');
-}
-
 //Finding Parent browserwise
 var _parentElem = null;
 if((browser.name == 'IE' || browser.name == 'MSIE' || browser.name == 'Firefox')){
