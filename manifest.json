@@ -1,0 +1,16 @@
+{
+  "name": "Akhil Arjun",
+  "short_name": "Akhil",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#57b1ff",
+  "background_color": "#eeeeee",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
