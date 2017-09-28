@@ -54,10 +54,10 @@ jQuery('.social-icon').click(function(e){
 var progressBarLoaded = false;
 var scrolled = false;
 jQuery(window).bind('mousewheel DOMMouseScroll touchmove scroll',function(e){
-    console.log(jQuery(this).width());
     var leftBar = jQuery('.left-bar');
     var windowWidth = jQuery(this).width();
     var scrollTopLimit = _parentElem.scrollTop();
+    console.log(windowWidth, scrollTopLimit, leftBar.hasClass('aside'));
     setTimeout(function(){
         if(windowWidth > 600){
             if(!leftBar.hasClass('aside') && scrollTopLimit > 0){
