@@ -485,7 +485,7 @@ a{
     color: #fff;
     background: transparent;
     width: 100%;
-    border: 2px dashed #000;
+    border: 2px dashed #ccc;
     outline: none;
     text-transform: capitalize;
 }
@@ -562,14 +562,14 @@ a{
 
 .input input:focus,
 .input textarea:focus{
-    border: 2px dashed #ccc;
+    border: 2px dashed #aaa;
 }
 
 .input label{
     position: absolute;
     left: 10px;
     top: 10px;
-    color: #ccc;
+    color: #ddd;
     opacity: 0.6;
     font-size: 0.9em;
     transition: all 300ms;
