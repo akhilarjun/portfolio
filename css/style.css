@@ -188,7 +188,7 @@ a{
 
 .hero-section.aside{
     width: 30%;
-    border-right: 1px solid #ddd;
+    /*border-right: 1px solid #ddd;*/
 }
 
 .logo-container{
@@ -314,7 +314,7 @@ a{
     z-index: 1;
     padding: 180px 0 0;
     background: #fff;
-	background: #57b1ff;
+	/*background: #57b1ff;*/
 }
 
 .section{
@@ -322,11 +322,11 @@ a{
 }
 
 .awesome-about{
-    color: #fff;
+    /*color: #fff;*/
 }
 
 .helper{
-    color: #fff;
+    /*color: #fff;*/
     font-size: 0.6em;
     font-weight: normal;
 }
@@ -403,7 +403,7 @@ a{
 .timeline-block .label > div{
     font-weight: normal;
     font-size: 0.7em;
-    color: #fff;
+    /*color: #fff;*/
 }
 
 .timeline-block .label:after{
@@ -435,7 +435,7 @@ a{
 }
 
 .timeline-block .desc .sub-header{
-    color: #fff;
+    /*color: #fff;*/
     font-weight: 300;
     margin-bottom: 10px;
 	margin-top: 5px;
@@ -444,7 +444,7 @@ a{
 
 .timeline-block .desc .description{
     font-size: 0.9em;
-    color: #fff;
+    /*color: #fff;*/
 }
 
 .pill{
@@ -485,7 +485,7 @@ a{
     color: #fff;
     background: transparent;
     width: 100%;
-    border: 2px dashed #fff;
+    border: 2px dashed #000;
     outline: none;
     text-transform: capitalize;
 }
@@ -556,13 +556,13 @@ a{
 .input textarea:valid + label{
     top: -22px;
     left: 0;
-    color: #fff;
+    color: #eee;
     font-size: 0.8em;
 }
 
 .input input:focus,
 .input textarea:focus{
-    border: 2px dashed #fff;
+    border: 2px dashed #eee;
 }
 
 .input label{
