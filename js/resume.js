@@ -12,7 +12,7 @@ var _parentElem = null;
 if((browser.name == 'IE' || browser.name == 'MSIE' || browser.name == 'Firefox')){
     _parentElem = jQuery('html');
 } else {
-    _parentElem = jQuery(window);
+    _parentElem = jQuery('html, body');
 }
 
 //Progress bar Load
