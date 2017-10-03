@@ -556,20 +556,20 @@ a{
 .input textarea:valid + label{
     top: -22px;
     left: 0;
-    color: #eee;
+    color: #ccc;
     font-size: 0.8em;
 }
 
 .input input:focus,
 .input textarea:focus{
-    border: 2px dashed #eee;
+    border: 2px dashed #ccc;
 }
 
 .input label{
     position: absolute;
     left: 10px;
     top: 10px;
-    color: #fff;
+    color: #ccc;
     opacity: 0.6;
     font-size: 0.9em;
     transition: all 300ms;
