@@ -490,6 +490,10 @@ a{
     text-transform: capitalize;
 }
 
+.input input, .input textarea{
+    color: #333;
+}
+
 .input:after{
     content: "";
     position: absolute;
