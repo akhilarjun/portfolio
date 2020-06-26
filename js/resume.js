@@ -12,7 +12,7 @@ var _parentElem = null;
 if((browser.name == 'IE' || browser.name == 'MSIE' || browser.name == 'Firefox')){
     _parentElem = jQuery('html');
 } else {
-    _parentElem = jQuery('body');
+    _parentElem = jQuery('html, body');
 }
 
 //Progress bar Load
@@ -54,13 +54,13 @@ jQuery('.social-icon').click(function(e){
 var progressBarLoaded = false;
 var scrolled = false;
 jQuery(window).bind('mousewheel DOMMouseScroll touchmove scroll',function(e){
-    var heroSection = jQuery('.hero-section');
+    var leftBar = jQuery('.left-bar');
     var windowWidth = jQuery(this).width();
     var scrollTopLimit = _parentElem.scrollTop();
     setTimeout(function(){
         if(windowWidth > 600){
-            if(!heroSection.hasClass('aside') && scrollTopLimit > 0){
-                heroSection.addClass('aside');
+            if(!leftBar.hasClass('aside') && scrollTopLimit > 0){
+                leftBar.addClass('aside');
                 loadProgressBar();
                 if(!scrolled){
                     _parentElem.animate({
@@ -68,7 +68,7 @@ jQuery(window).bind('mousewheel DOMMouseScroll touchmove scroll',function(e){
                     });
                 }
             } else if(jQuery('body').scrollTop() == 0){
-                //heroSection.removeClass('aside');
+                //leftBar.removeClass('aside');
             }
         } else {
             if(!progressBarLoaded){
@@ -81,23 +81,13 @@ jQuery(window).bind('mousewheel DOMMouseScroll touchmove scroll',function(e){
 
 //click Scroll here
 var setAside = function(){
-    var heroSection = jQuery('.hero-section');
+    var leftBar = jQuery('.left-bar');
     var windowWidth = jQuery(this).width();
     if(windowWidth > 600){
-        heroSection.addClass('aside');
+        leftBar.addClass('aside');
         loadProgressBar();
     }
 };
-
-//Type Effect
-jQuery('#typing-letters').typed({
-    strings : ["I am a <strong>Blogger</strong>",
-               "^500 <strong>Designer</strong>",
-               "^500 And also...",
-               "^500 <strong>Web Developer</strong>"],
-    typeSpeed : 0,
-    loop : true
-});
 
 //Navigation
 jQuery('.menu').click(function(){
@@ -106,7 +96,37 @@ jQuery('.menu').click(function(){
         var elemToScrollTo = jQuery(idToScroll);
         scrolled = true;
         _parentElem.animate({
-            scrollTop : elemToScrollTo.offset().top+'px'
+            scrollTop : (elemToScrollTo.offset().top-50)+'px'
         },500);
     }
 });
+
+//Get my CV
+jQuery('.get-my-cv button').click(function(){
+    window.open('http://www.akhilarjun.com/Akhil-Arjun-CV.docx');
+});
+
+//Time to read the CV
+var totalText = jQuery('body').text().replace(/\s/gm,'');
+jQuery('#minsToRead').text(_timeToRead(totalText.length));
+
+//hack to fix the jump issue in mobileBrowsers
+var moo = function(event){
+    //It's a Moo Point - 'Joey Tribbiani'
+};
+jQuery(window).resize(moo);
+
+//welcoming you
+var boldStyle = 'font-weight:bold;color:#333;',
+    blank = '',
+    emailStyle = 'color:#39c;text-decoration:underline;',
+    consoleStyle = 'padding:1px 5px;border-radius:3px;background:#333;color:#eee;';
+window.console.log('%cHey There!%c '+
+                   '\n\nSo you love %cConsole%c too. Cool ! '+
+                   '\nIf you have any suggestions regarding the site or maybe wanna talk about any project, '+
+                   'feel free to drop a mail at %cakhilparjun@gmail.com%c '+
+                   '\n\nRegards, \n%cAkhil Arjun%c',
+                   boldStyle,blank,
+                   consoleStyle,blank,
+                   emailStyle,blank,
+                   boldStyle,blank);

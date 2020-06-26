@@ -1,10 +1,11 @@
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
     .flex.mobile-v{
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+        display: block;
     }
     .flex.mobile-v .flex-child{
         width: 100%;
@@ -13,11 +14,20 @@
         display: none !important;
     }
     .hero-section.aside{
-        width: 0%;
-        left: -999px;
+        width: 100%;
+        border-right-color: transparent;
+    }
+    .hero-section{
+        position: absolute;
+    }
+    .logo{
+        max-width: 50%;
     }
     .right-side-pull{
         width: 100%;
+        position: absolute;
+        top: 100%;
+        padding-top: 50px;
     }
     html{
         font-size: 17px !important;
