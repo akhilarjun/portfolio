@@ -580,6 +580,116 @@ a{
     cursor: text;
 }
 
+.section .input{
+    position: relative;
+    margin: 20px 0 30px;
+}
+
+.input.subjectForMail{
+    margin-top: 35px;
+}
+
+.input.bodyForMail{
+    margin-bottom: 15px;
+}
+
+.input input,
+.input textarea,
+.input button{
+    padding: 10px;
+    font-size: 0.9em;
+    color: #333;
+    width: 100%;
+    border: 2px solid #ccc;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.input:after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0;
+    height: 2px;
+    background: #c44;
+    transition: all 300ms;
+}
+
+.input.bodyForMail:after{
+    bottom: 4px;
+}
+
+.input.error:after{
+    width: 100%;
+}
+
+.input textarea{
+    resize: none;
+    overflow-y: auto;
+}
+
+.input.get-my-cv button{
+	cursor: pointer;
+	color: #222;
+	box-shadow: 0 0 5px 1px #ddd;
+	width: initial;
+	margin-top: 30px;
+}
+
+.input .sendMailBtn{
+    cursor: pointer;
+    background: #fff;
+    color: #444;
+    font-weight: 500;
+    width: auto;
+    padding: 10px 15px 10px 20px;
+    transition: all 200ms;
+}
+
+.input .sendMailBtn i{
+    position: relative;
+    right: -20px;
+    opacity: 0;
+    transition: all 200ms;
+}
+
+.input .sendMailBtn:hover{
+    background: #ccc;
+    color: #333;
+}
+
+.input .sendMailBtn:hover i{
+    right: 0;
+    opacity: 1;
+}
+
+.input input:active + label,
+.input input:focus + label,
+.input textarea:active + label,
+.input textarea:focus + label,
+.input input:valid + label,
+.input textarea:valid + label{
+    top: -22px;
+    left: 0;
+    color: #888;
+    font-weight: 600;
+}
+
+.input input:focus,
+.input textarea:focus{
+    border: 2px solid #aaa;
+}
+
+.input label{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #ccc;
+    font-size: 0.9em;
+    transition: all 300ms;
+    cursor: text;
+}
+
 .footer{
     padding: 15px;
     background: #fff;
