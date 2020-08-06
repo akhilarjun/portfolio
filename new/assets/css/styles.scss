@@ -1,0 +1,153 @@
+@import 'colors.scss';
+
+html {
+    font-size: 8px;
+}
+
+@media(max-width :750px) {
+    html {
+        font-size: 6px;
+    }
+    .bg-waves {
+        img {
+            &:nth-child(1) {
+                animation: scroll-more 10s ease-in infinite alternate forwards !important;
+            }
+            &:nth-child(2) {
+                animation: scroll-more 8s ease-in infinite alternate-reverse forwards !important;
+            }
+            &:nth-child(3) {
+                animation: scroll-more 6s ease-in infinite alternate forwards !important;
+            }
+        }
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: $dark;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.bg-waves {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    img {
+        position: fixed;
+        bottom: -15rem;
+        transform: scale(1.2);
+        &:nth-child(1) {
+            animation: scroll 10s ease-in infinite alternate forwards;
+        }
+        &:nth-child(2) {
+            animation: scroll 8s ease-in infinite alternate-reverse forwards;
+        }
+        &:nth-child(3) {
+            animation: scroll 6s ease-in infinite alternate forwards;
+        }
+    }
+
+    @keyframes scroll {
+        from {
+            left: 0;
+        } to {
+            left: -10%;
+        }
+    }
+    @keyframes scroll-more {
+        from {
+            left: 0;
+        } to {
+            left: -30%;
+        }
+    }
+}
+
+section {
+    height: 100vh;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        ". n n n n n n n n n n ."
+        ". m m m m m m m m m m ."
+        ". f f f f f f f f f f .";
+}
+
+nav {
+    grid-area: n;
+    padding: 4rem 0;
+    display: flex;
+    font-size: 2.3rem;
+    color: $white;
+
+    .logo {
+        img {
+            vertical-align: middle;
+        }
+    }
+
+    ul {
+        display: flex;
+        margin: 0;
+        margin-left: auto;
+        li {
+            list-style: none;
+            margin-right: 3rem;
+            a {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+    }
+}
+
+.main {
+    grid-area: m;
+    display: grid;
+    align-items: center;
+
+    .content {
+        line-height: 7.2rem;
+    }
+
+    .salute {
+        font-size: 5rem;
+        font-weight: 200;
+        color: $white;
+    }
+
+    .intro {
+        font-weight: 700;
+        font-size: 7.2rem;
+        color: $white;
+
+        .blue {
+            color: $primary-blue;
+        }
+    }
+
+    .tag-line {
+        font-size: 3rem;
+        color: $white;
+    }
+}
+
+footer {
+    grid-area: f;
+    padding: 10rem 0 2rem;
+    img {
+        margin-right: 2rem;
+        cursor: pointer;
+    }
+}
