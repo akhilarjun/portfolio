@@ -1,0 +1,15 @@
+.bounce{
+    position: relative;
+    -webkit-animation: bounceIt 800ms infinite;
+    animation: bounceIt 800ms infinite;
+}
+
+@keyframes bounceIt{
+    from { top: 0px; }
+    to { top: 3px; }
+}
+
+@-webkit-keyframes bounceIt{
+    from { top: 0px; }
+    to { top: 3px; }
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#57b1ff">
+        <title>Akhil Arjun</title>
+        <link rel="manifest" href="manifest.json">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/responsive-tab.css" rel="stylesheet">
+        <link href="css/responsive-mobile.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/typing-effect.css" rel="stylesheet">
+        <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <script src="js/jq.js"></script>
+        <script src="js/typed_min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-80085011-1', 'auto');
+          ga('send', 'pageview');
+        
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Akhil Arjun",
+          "jobTitle": "Software Analyst",
+          "telephone": "+91-7507558626",
+          "email": "akhilparjun@gmail.com",
+          "image": "https://avatars0.githubusercontent.com/u/9076874",
+          "homeLocation": {
+          	"@type": "Place",
+            "name": "Mumbai"
+           }
+        }
+        </script>
+        <script>
+            //Font Load
+            var initiatePageLoad = function(){
+                jQuery('.loader-section').addClass('hide');
+                jQuery('#typing-letters').typed({
+                    strings : ["I am a <strong>Blogger</strong>",
+                               "^500 <strong>Designer</strong>",
+                               "^500 And also...",
+                               "^500 a <strong>Web Developer</strong>"],
+                    typeSpeed : 0,
+                    loop : true
+                });
+            };
+            WebFont.load({
+                google: {
+                    families: ['Roboto']
+                },
+                active : function(){
+                    initiatePageLoad();
+                },
+                inactive : function(){
+                    initiatePageLoad();
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="loader-section">
+            <div class="hero-section flex center">
+                <div class="logo-container margin-auto">
+                    <div class="logo-name ns loader-text">loading</div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Navigation Bar -->
+            <div class="nav flex">
+                <div class="flex-child"></div>
+                <div class="no-flex menu withHoverEffects ns" href="#about">About</div>
+                <!-- <div class="no-flex menu withHoverEffects ns">Blog</div> -->
+                <div class="no-flex menu withHoverEffects ns" href="#contactMe">Say Hello</div>
+            </div>
+            <!-- Hero Section -->
+            <div class="hero-section left-bar flex center">
+                <!-- Logo Holder -->
+                <div class="logo-container margin-auto">
+                    <img src="img/logo_opt.png" class="logo">
+                    <div class="divider"></div>
+                    <div class="logo-name ns">
+                        Akhil Arjun
+                    </div>
+                    <div class="logo-desc-email tab-h">
+                        akhilparjun@gmail.com
+                    </div>
+                    <div class="logo-desc-extra">
+                        // <span id='typing-letters'></span>
+                    </div>
+                    <div class="logo-desc-extra">
+                        <div class="input get-my-cv">
+                            <button>Get My CV</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Scroll Text -->
+                <div class="scroll-down flex center tab-h">
+                    <div class="margin-auto flex bounce" onclick="setAside()">
+                        <div class="flex-child">
+                            <i class="fa fa-angle-double-down"></i>
+                        </div>
+                        <div class="no-flex text">
+                            Scroll [Read It In <span id="minsToRead"></span> mins]
+                        </div>
+                    </div>
+                </div>
+                <!-- Social Icons -->
+                <div class="social-footer flex">
+                    <div class="margin-auto flex">
+                        <div class="flex-child social-icon github">
+                            <i class="fa fa-github"></i>
+                        </div>
+                        <div class="flex-child social-icon facebook">
+                            <i class="fa fa-facebook"></i>
+                        </div>
+                        <div class="flex-child social-icon linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Side Section -->
+            <div class="right-side-pull">
+                <!-- Content -->
+                <div class="content">
+                    <div id="about" class="section">
+                        <div class="heading">
+                            About
+                        </div>
+                        <div class="awesome-about">
+                            I am a User Experience enthusiast, with 5 years of experience in designing and developing interactive applications
+                        </div>
+                    </div>
+                    <!-- Skills Section -->
+                    <div class="section">
+                        <div class="heading">
+                            Skills
+                        </div>
+                        <div class="flex skill-set mobile-v">
+                            <div class="flex-child skill flex vertical">
+                                <div class="flex-child skill-name">Javascript</div>
+                                <div class="flex-child flex">
+                                    <div class="progress-bar flex-child">
+                                        <i data-progress="85"><span></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-child skill flex vertical">
+                                <div class="flex-child skill-name">HTML5</div>
+                                <div class="flex-child flex">
+                                    <div class="progress-bar flex-child">
+                                        <i data-progress="90"><span></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex skill-set mobile-v">
+                            <div class="flex-child skill flex vertical">
+                                <div class="flex-child skill-name">CSS3</div>
+                                <div class="flex-child flex">
+                                    <div class="progress-bar flex-child">
+                                        <i data-progress="90"><span></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-child skill flex vertical">
+                                <div class="flex-child skill-name">Java</div>
+                                <div class="flex-child flex">
+                                    <div class="progress-bar flex-child">
+                                        <i data-progress="75"><span></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex skill-set mobile-v">
+                            <div class="flex-child skill flex vertical">
+                                <div class="flex-child skill-name">jQuery</div>
+                                <div class="flex-child flex">
+                                    <div class="progress-bar flex-child">
+                                        <i data-progress="80"><span></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-child skill flex vertical">
+                                <div class="flex-child skill-name">AngularJs</div>
+                                <div class="flex-child flex">
+                                    <div class="progress-bar flex-child">
+                                        <i data-progress="90"><span></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex skill-set mobile-v">
+                            <div class="flex-child skill flex vertical">
+                                <div class="flex-child skill-name">FireBase</div>
+                                <div class="flex-child flex">
+                                    <div class="progress-bar flex-child">
+                                        <i data-progress="70"><span></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-child skill flex vertical">
+                                <div class="flex-child skill-name">Angular 6</div>
+                                <div class="flex-child flex">
+                                    <div class="progress-bar flex-child">
+                                        <i data-progress="90"><span></span></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Experience Section -->
+                    <div class="section">
+                        <div class="timeline-heading">
+                            Experience
+                            <div class="helper">5 Years 1 Months</div>
+                        </div>
+                        <div class="timeline-block flex mobile-v">
+                            <div class="label no-flex">
+                                2016-Now
+                                <div>2.1 Years</div>
+                            </div>
+                            <div class="desc flex-child">
+                                <div class="header">Associate - Senior Software Developer</div>
+                                <div class="sub-header">TIAA</div>
+                                <div class="description">
+                                    I am working here primarily as a UI and Java Developer. Targeted application users are US citizens who come from the Teaching and Hospital backgrounds. Applications are built on a versatile and at the same time flexible framework.
+                                    <br/>
+                                    <div class="pill-desc">Technologies Used: </div>
+                                    <div class="pill">HTML 5</div>
+                                    <div class="pill">CSS3</div>
+                                    <div class="pill">Angular 2</div>
+                                    <div class="pill">Angular 6</div>
+                                    <div class="pill">NodeJs</div>
+                                    <div class="pill">Freemarker</div>
+                                    <div class="pill">jQuery</div>
+                                    <div class="pill">Javascript</div>
+                                    <div class="pill">J2EE</div>
+                                    <div class="pill">Spring</div>
+                                    <div class="pill">JBOSS/Tomcat</div>
+                                    <div class="pill">Oracle DB</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-block flex mobile-v">
+                            <div class="label no-flex">
+                                2013-2016
+                                <div>2.11 Years</div>
+                            </div>
+                            <div class="desc flex-child">
+                                <div class="header">System Engineer</div>
+                                <div class="sub-header">Tata Consultancy Services</div>
+                                <div class="description">
+                                    I had the opportunity to develop three humongous applications from scratch. A hybrid mobile application and two world class website applications. Cutting edge front-end technology was used in the application and it hosted tons of features that blew the user's mind away!
+                                    <br/>
+                                    <div class="pill-desc">Technologies Used: </div>
+                                    <div class="pill">HTML 5</div>
+                                    <div class="pill">CSS3</div>
+                                    <div class="pill">Angular Js</div>
+                                    <div class="pill">jQuery</div>
+                                    <div class="pill">Javascript</div>
+                                    <div class="pill">J2EE</div>
+                                    <div class="pill">Spring</div>
+                                    <div class="pill">Postgres</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-block flex mobile-v">
+                            <div class="label no-flex">
+                                2012-2013
+                                <div>6 Months</div>
+                            </div>
+                            <div class="desc flex-child">
+                                <div class="header">Internship</div>
+                                <div class="sub-header">The Links</div>
+                                <div class="description">
+                                    I worked as a Managerial Trainee here for 6 months. Had wonderful opportunity to work with clients like Fortis Hospital Network, HDFC bank, BNP Paribas, etc. I engineered 2 advertising ideas which were later used for brand management of Fortis.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Education Section -->
+                    <div class="section">
+                        <div class="timeline-heading">
+                            Education
+                        </div>
+                        <div class="timeline-block flex mobile-v">
+                            <div class="label no-flex">2009-2013</div>
+                            <div class="desc flex-child">
+                                <div class="header">Bachelor Of Technology - Biomedical Engineering</div>
+                                <div class="sub-header">Govt. Model Engineering College</div>
+                                <div class="description">
+                                    I completed my degree in Electronics and Biomedical Engineering from Govt. Model Engineering College, Thrikkakara, Kerala. Ooh yes, Biomedical! I am a web designer who knows how to fix your bone or maybe design you a prosthetic organ ;)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-block flex mobile-v">
+                            <div class="label no-flex">2007-2009</div>
+                            <div class="desc flex-child">
+                                <div class="header">Higher Secondary Education</div>
+                                <div class="sub-header">New English Jr. College</div>
+                                <div class="description">
+                                    I completed my Higher secondary with Biology and IT as main streams. I always had love for both websites and for how a human body functions. They both had one thing in common, creativity and beauty.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="heading">
+                            Hey There!
+                            <div class="helper">
+                                Lets get in touch
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input subjectForMail">
+                                <input type="text" id='subject' required="true">
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="input bodyForMail">
+                                <textarea id='msgbody' rows="5" required="true"></textarea>
+                                <label for="msgbody">Say Hi</label>
+                            </div>
+                            <div class="input btnForMail">
+                                <button onclick="checkAuth()" class="sendMailBtn">
+                                    Send Mail <i class="fa fa-send-o"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div id="contactMe" class="footer flex">
+                    <div class="flex-child"></div>
+                    <div class="no-flex">
+                        <i class="fa fa-copyright"></i> A Concept By Akhil Arjun
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/find_browser.js"></script>
+        <script src="js/resume.js"></script>
+        <script src="js/send-mail-api.js"></script>
+        <script src="https://apis.google.com/js/client.js"></script>
+    </body>
+</html>
