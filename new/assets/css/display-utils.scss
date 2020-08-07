@@ -1,0 +1,198 @@
+@mixin defaults($mediaquery: '') {
+    .#{$mediaquery}flex {
+        display: flex;
+    }
+
+    .#{$mediaquery}flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    .#{$mediaquery}flex-row {
+        flex-direction: row;
+    }
+
+    .#{$mediaquery}flex-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    .#{$mediaquery}flex-column {
+        flex-direction: column;
+    }
+
+    .#{$mediaquery}flex-column-reverse {
+        flex-direction: column-reverse;
+    }
+
+    .#{$mediaquery}grid {
+        display: grid;
+    }
+
+    .#{$mediaquery}item-center {
+        place-items: center;
+    }
+
+    .#{$mediaquery}align-center {
+        align-items: center;
+    }
+
+    .#{$mediaquery}justify-center {
+        justify-content: center;
+    }
+
+    .#{$mediaquery}text-left {
+        text-align: left;
+    }
+
+    .#{$mediaquery}text-right {
+        text-align: right;
+    }
+
+    .#{$mediaquery}text-center {
+        text-align: center;
+    }
+
+    .#{$mediaquery}text-justify {
+        text-align: justify;
+    }
+
+    .#{$mediaquery}w-full {
+        width: 100%;
+    }
+}
+
+@mixin width($size, $mediaquery: '') {
+    .#{$mediaquery}w-1\/#{$size} {
+        width: (100 * 1/$size) * 1%;
+    }
+}
+
+@mixin margin($i, $mediaquery: '') {
+    .#{$mediaquery}m-#{$i} {
+        margin: #{$i}rem;
+    }
+    .#{$mediaquery}mt-#{$i} {
+        margin-top: #{$i}rem;
+    }
+    .#{$mediaquery}mb-#{$i} {
+        margin-bottom: #{$i}rem;
+    }
+    .#{$mediaquery}ml-#{$i} {
+        margin-left: #{$i}rem;
+    }
+    .#{$mediaquery}mr-#{$i} {
+        margin-right: #{$i}rem;
+    }
+    .#{$mediaquery}mx-#{$i} {
+        margin-right: #{$i}rem;
+        margin-left: #{$i}rem;
+    }
+    .#{$mediaquery}my-#{$i} {
+        margin-top: #{$i}rem;
+        margin-bottom: #{$i}rem;
+    }
+}
+
+@mixin padding($i, $mediaquery: '') {
+    .#{$mediaquery}p-#{$i} {
+        padding: #{$i}rem;
+    }
+    .#{$mediaquery}pt-#{$i} {
+        padding-top: #{$i}rem;
+    }
+    .#{$mediaquery}pb-#{$i} {
+        padding-bottom: #{$i}rem;
+    }
+    .#{$mediaquery}pl-#{$i} {
+        padding-left: #{$i}rem;
+    }
+    .#{$mediaquery}pr-#{$i} {
+        padding-right: #{$i}rem;
+    }
+    .#{$mediaquery}px-#{$i} {
+        padding-right: #{$i}rem;
+        padding-left: #{$i}rem;
+    }
+    .#{$mediaquery}py-#{$i} {
+        padding-top: #{$i}rem;
+        padding-bottom: #{$i}rem;
+    }
+}
+
+//defaults
+@include defaults();
+
+// Width Utility
+@for $i from 2 through 12 {
+    @include width($i)
+}
+
+// Margin and Padding Utility
+@for $i from 0 through 30 {
+    @include margin($i);
+    @include padding($i);
+}
+
+@media(min-width: 350px){
+    $query: 'sm\\:';
+
+    // Width Utility
+    @include defaults($query);
+
+    @for $i from 2 through 12 {
+        @include width($i, $query)
+    }
+
+    // Margin and Padding Utility
+    @for $i from 0 through 30 {
+        @include margin($i, $query);
+        @include padding($i, $query);
+    }
+}
+
+@media(min-width: 600px){
+    $query: 'md\\:';
+    @include defaults($query);
+
+    // Width Utility
+    @for $i from 2 through 12 {
+        @include width($i, $query)
+    }
+
+    // Margin and Padding Utility
+    @for $i from 0 through 30 {
+        @include margin($i, $query);
+        @include padding($i, $query);
+    }
+}
+
+@media (min-width: 1000px){
+    $query: 'lg\\:';
+    @include defaults($query);
+
+    // Width Utility
+    @for $i from 2 through 12 {
+        @include width($i, $query)
+    }
+
+    // Margin and Padding Utility
+    @for $i from 0 through 30 {
+        @include margin($i, $query);
+        @include padding($i, $query);
+    }
+}
+
+@media (min-width: 1500px){
+    $query: 'xlg\\:';
+    @include defaults($query);
+
+    // Width Utility
+    @for $i from 2 through 12 {
+        @include width($i, $query)
+    }
+
+    // Margin and Padding Utility
+    @for $i from 0 through 30 {
+        @include margin($i, $query);
+        @include padding($i, $query);
+    }
+}
