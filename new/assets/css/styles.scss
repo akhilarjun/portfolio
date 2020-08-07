@@ -1,4 +1,5 @@
 @import 'colors.scss';
+@import 'display-utils.scss';
 
 html {
     font-size: 8px;
@@ -10,14 +11,14 @@ html {
     }
     .bg-waves {
         img {
-            &:nth-child(1) {
-                animation: scroll-more 10s ease-in infinite alternate forwards !important;
+            &.waves-home:nth-child(1) {
+                animation: scroll-more 10s ease-in infinite alternate forwards, bring-up 1s ease-in-out 1 forwards !important;
             }
-            &:nth-child(2) {
-                animation: scroll-more 8s ease-in infinite alternate-reverse forwards !important;
+            &.waves-home:nth-child(2) {
+                animation: scroll-more 8s ease-in infinite alternate-reverse forwards, bring-up 1.5s ease-in-out 1 forwards !important;
             }
-            &:nth-child(3) {
-                animation: scroll-more 6s ease-in infinite alternate forwards !important;
+            &.waves-home:nth-child(3) {
+                animation: scroll-more 6s ease-in infinite alternate forwards, bring-up 1.3s ease-in-out 1 forwards !important;
             }
         }
     }
@@ -43,16 +44,21 @@ body {
 
     img {
         position: fixed;
-        bottom: -15rem;
         transform: scale(1.2);
-        &:nth-child(1) {
-            animation: scroll 10s ease-in infinite alternate forwards;
-        }
-        &:nth-child(2) {
-            animation: scroll 8s ease-in infinite alternate-reverse forwards;
-        }
-        &:nth-child(3) {
-            animation: scroll 6s ease-in infinite alternate forwards;
+        &.waves-home {
+            bottom: -80rem;
+            &:nth-child(1) {
+                animation: scroll 10s ease-in infinite alternate forwards, bring-up 1s ease-in-out 1 forwards;
+            }
+            &:nth-child(2) {
+                animation: scroll 8s ease-in infinite alternate-reverse forwards, bring-up 1.5s ease-in-out 1 forwards;
+            }
+            &:nth-child(3) {
+                animation: scroll 6s ease-in infinite alternate forwards, bring-up 1.3s ease-in-out 1 forwards;
+            }
+            &.hide {
+                animation: bring-down 1s ease-in-out 1 forwards;
+            }
         }
     }
 
@@ -61,6 +67,20 @@ body {
             left: 0;
         } to {
             left: -10%;
+        }
+    }
+    @keyframes bring-down {
+        from {
+            bottom: -15rem;
+        } to {
+            bottom: -80rem;
+        }
+    }
+    @keyframes bring-up {
+        from {
+            bottom: -80rem;
+        } to {
+            bottom: -15rem;
         }
     }
     @keyframes scroll-more {
@@ -91,9 +111,14 @@ nav {
     font-size: 2.3rem;
     color: $white;
 
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+
     .logo {
         img {
-            vertical-align: middle;
+            vertical-align: sub;
         }
     }
 
@@ -104,21 +129,22 @@ nav {
         li {
             list-style: none;
             margin-right: 3rem;
-            a {
-                text-decoration: none;
-                color: $white;
-            }
         }
     }
 }
 
 .main {
     grid-area: m;
-    display: grid;
-    align-items: center;
 
     .content {
-        line-height: 7.2rem;
+        will-change: opacity;
+        transition: all 1000ms;
+        &.hide {
+            opacity: 0;
+            .profile-pic {
+                top: -10rem;
+            }
+        }
     }
 
     .salute {
@@ -140,6 +166,26 @@ nav {
     .tag-line {
         font-size: 3rem;
         color: $white;
+
+        .tag {
+            font-size: 2rem;
+            background: $primary-blue;
+            color: $white;
+            padding: 0.2rem 1.5rem;
+            border-radius: 2rem;
+            display: inline-block;
+            margin-right: 1rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .profile-pic {
+        transition: all 1500ms;
+        position: relative;
+        top: 0;
+        z-index: -2;
+        max-width: 500px;
+        border-radius: 50%;
     }
 }
 
