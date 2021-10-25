@@ -8242,9 +8242,7 @@ section {
       grid-template-columns: repeat(12, 1fr);
   -ms-grid-rows: auto 1fr auto;
       grid-template-rows: auto 1fr auto;
-      grid-template-areas: ". n n n n n n n n n n ."
- ". m m m m m m m m m m ."
- ". f f f f f f f f f f .";
+      grid-template-areas: ". n n n n n n n n n n ." ". m m m m m m m m m m ." ". f f f f f f f f f f .";
 }
 
 nav {
@@ -8343,6 +8341,30 @@ nav ul li {
   z-index: -2;
   max-width: 500px;
   border-radius: 50%;
+  -webkit-animation: come-down-fade-in 1s ease-in-out 1 forwards;
+          animation: come-down-fade-in 1s ease-in-out 1 forwards;
+}
+
+@-webkit-keyframes come-down-fade-in {
+  from {
+    top: -10rem;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes come-down-fade-in {
+  from {
+    top: -10rem;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 footer {

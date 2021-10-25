@@ -186,6 +186,17 @@ nav {
         z-index: -2;
         max-width: 500px;
         border-radius: 50%;
+        animation: come-down-fade-in 1s ease-in-out 1 forwards;
+    }
+
+    @keyframes come-down-fade-in{
+        from {
+            top: -10rem;
+            opacity: 0;
+        } to {
+            top: 0;
+            opacity: 1;
+        }
     }
 }
 

@@ -1,6 +1,6 @@
-function goToPage(pageUrl) {
+function goToPage(pageUrl, forced) {
     const toNavigate = `/new/${pageUrl}.html`;
-    if (location.pathname !== toNavigate) {
+    if (location.pathname !== toNavigate || forced) {
         history.pushState({pageUrl}, `${pageUrl}`, toNavigate);
         fetch(toNavigate).then(res => {
             res.text().then(html => {
@@ -16,4 +16,17 @@ function goToPage(pageUrl) {
             });
         });
     }
+}
+
+setupState = () => {
+    let path = location.pathname.split('/').pop().replace('.html', '');
+    if (!path) {
+        path = 'index';
+    }
+    history.replaceState({pageUrl: path}, `${path}`, `/new/${path}.html`);
+}
+setupState();
+
+window.onpopstate = (e) => {
+    goToPage(e.state.pageUrl, true);
 }
