@@ -1,4 +1,4 @@
 # Portfolio
-This is my portfolio.
+This is my portfolio website.
 
 ### Visit www.akhilarjun.com
